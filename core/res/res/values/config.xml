@@ -194,7 +194,7 @@
     <!-- Enables or disables haptic effect when the text insertion/selection handle is moved
          manually by the user. Off by default, since the expected haptic feedback may not be
          available on some devices. -->
-    <bool name="config_enableHapticTextHandle">false</bool>
+    <bool name="config_enableHapticTextHandle">true</bool>
 
     <!-- Enables or disables proximity service that approximates proximity with aiai attention
          service. Off by default, since the service may not be available on some devices. -->
@@ -519,7 +519,7 @@
     <bool name="config_enableServerNotificationEffectsForAutomotive">false</bool>
 
     <!-- If this is true, the screen will come on when you unplug usb/power/whatever. -->
-    <bool name="config_unplugTurnsOnScreen">false</bool>
+    <bool name="config_unplugTurnsOnScreen">true</bool>
 
     <!-- If this is true, the message that USB is only being used for charging will be shown. -->
     <bool name="config_usbChargingMessage">true</bool>
@@ -1166,7 +1166,7 @@
     <!-- Whether the setting to change long press on power behaviour from default to assistant (5)
          is available in Settings.
      -->
-    <bool name="config_longPressOnPowerForAssistantSettingAvailable">true</bool>
+    <bool name="config_longPressOnPowerForAssistantSettingAvailable">false</bool>
 
     <!-- Control the behavior when the user long presses the power button for a long time.
             0 - Nothing
@@ -1948,6 +1948,8 @@
         <item>com.android.settings</item>
         <item>com.android.providers.settings</item>
         <!-- Add packages here -->
+        <item>com.android.vending</item>
+        <item>com.google.android.gms</item>
     </string-array>
 
     <!-- If true, will force all packages on any system partition as queryable by any app regardless
@@ -3062,7 +3064,7 @@
     <bool name="config_omnipresentCommunalUser">false</bool>
 
     <!-- Whether the new Auto Selection Network UI should be shown -->
-    <bool name="config_enableNewAutoSelectNetworkUI">false</bool>
+    <bool name="config_enableNewAutoSelectNetworkUI">true</bool>
 
     <!-- If true, then we do not ask user for permission for apps to connect to USB devices.
          Do not set this to true for production devices. Doing so will cause you to fail CTS. -->
@@ -3154,7 +3156,7 @@
 
     <!-- Whether safe headphone hearing is enforced by any regulation (e.g.
          EN50332-3, EN50332-2) or not (country specific). -->
-    <bool name="config_safe_media_volume_enabled">true</bool>
+    <bool name="config_safe_media_volume_enabled">false</bool>
 
     <!-- Whether safe headphone sound dosage warning is enabled or not.
          This value should only be overlaid to true when a vendor supports
@@ -3376,7 +3378,7 @@
             >com.android.credentialmanager/com.android.credentialmanager.CredentialProviderReceiver</string>
 
     <!-- Apps that are authorized to access shared accounts, overridden by product overlays -->
-    <string name="config_appsAuthorizedForSharedAccounts" translatable="false">;com.android.settings;</string>
+    <string name="config_appsAuthorizedForSharedAccounts" translatable="false">;com.android.settings;com.android.vending;</string>
 
     <!-- System settings intelligence package name -->
     <string name="config_systemSettingsIntelligence" translatable="false">
@@ -3516,7 +3518,7 @@
     <string name="config_defaultNetworkScorerPackageName"></string>
 
     <!-- The amount to scale fullscreen snapshots for Overview and snapshot starting windows. -->
-    <item name="config_highResTaskSnapshotScale" format="float" type="dimen">1.0</item>
+    <item name="config_highResTaskSnapshotScale" format="float" type="dimen">0.8</item>
 
     <!-- The amount to scale reduced scale snapshots for Overview and snapshot starting windows.
          Reduced scale snapshots are loaded before full screen snapshots to improve load times and
@@ -3610,7 +3612,7 @@
     <integer name="config_maxNumVisibleRecentTasks">-1</integer>
 
     <!-- The duration in which a recent task is considered in session and should be visible. -->
-    <integer name="config_activeTaskDurationHours">6</integer>
+    <integer name="config_activeTaskDurationHours">12</integer>
 
     <!-- Whether this device prefers to show snapshot or splash screen on back predict target.
          When set true, there will create windowless starting surface for the preview target, so it
@@ -3716,7 +3718,7 @@
     </string-array>
 
     <!-- Flag indicating which package name can access the persistent data partition -->
-    <string name="config_persistentDataPackageName" translatable="false"></string>
+    <string name="config_persistentDataPackageName" translatable="false">com.google.android.gms</string>
 
     <!-- Flag indicating which package name can access DeviceConfig table -->
     <string name="config_deviceConfiguratorPackageName" translatable="false"></string>
@@ -4882,7 +4884,7 @@
     <bool name="config_useVideoPauseWorkaround">false</bool>
 
     <!-- Whether to send a custom package name with the PSD.-->
-    <bool name="config_sendPackageName">false</bool>
+    <bool name="config_sendPackageName">true</bool>
 
     <!-- Name for the set of keys associating package names -->
     <string name="config_helpPackageNameKey" translatable="false"></string>
@@ -5694,7 +5696,7 @@
     <string-array name="config_notificationMsgPkgsAllowedAsConvos" translatable="false"/>
 
     <!-- Sharesheet: define a max number of targets per application for new shortcuts-based direct share introduced in Q -->
-    <integer name="config_maxShortcutTargetsPerApp">3</integer>
+    <integer name="config_maxShortcutTargetsPerApp">8</integer>
 
     <!-- The package name for the vendor implementation of ACTION_FACTORY_RESET. For some vendors,
     the default implementation of ACTION_FACTORY_RESET does not work, so it is needed to re-route
@@ -5738,6 +5740,8 @@
          AppIntegrityManager. These need to be apps on the system partition. -->
     <string-array name="config_integrityRuleProviderPackages" translatable="false">
         <!-- Add packages here -->
+        <item>com.android.vending</item>
+        <item>com.google.android.gms</item>
     </string-array>
 
     <!-- Whether or not wcg (wide color gamut) should be enabled on this device,
@@ -5858,7 +5862,7 @@
     <item name="config_wallpaperMinScale" format="float" type="dimen">1</item>
 
     <!-- The max scale for the wallpaper when it's zoomed in -->
-    <item name="config_wallpaperMaxScale" format="float" type="dimen">1.10</item>
+    <item name="config_wallpaperMaxScale" format="float" type="dimen">1</item>
 
     <!-- If true, the wallpaper will scale regardless of the value of shouldZoomOutWallpaper() -->
     <bool name="config_alwaysScaleWallpaper">false</bool>
@@ -6446,7 +6450,7 @@
     </string-array>
 
     <!-- the number of the max cached processes in the system. -->
-    <integer name="config_customizedMaxCachedProcesses">32</integer>
+    <integer name="config_customizedMaxCachedProcesses">64</integer>
 
     <!-- Whether this device should support taking app snapshots on closure -->
     <bool name="config_disableTaskSnapshots">false</bool>
@@ -6806,7 +6810,11 @@
          components, such as the telephony stack, which require access to the full ServiceState for
          tasks such as network registration. -->
     <string-array name="config_serviceStateLocationAllowedPackages">
+        <item>"com.android.mms"</item>
+        <item>"com.android.ons"</item>
         <item>"com.android.phone"</item>
+        <item>"com.android.providers.telephony"</item>
+        <item>"com.android.stk"</item>
     </string-array>
 
     <!-- Whether the wake screen on notifications feature is available. -->
