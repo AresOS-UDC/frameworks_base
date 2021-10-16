@@ -45,4 +45,10 @@
     <!-- Screen record -->
     <string name="screenrecord_keep_screen_awake_label">Stay awake</string>
     <string name="screenrecord_keep_screen_awake_summary">Keep the screen on</string>
+
+    <!-- Sound QS Tile -->
+    <string name="quick_settings_sound_label">Sound</string>
+    <string name="quick_settings_sound_ring">Ring</string>
+    <string name="quick_settings_sound_vibrate">Vibrate</string>
+    <string name="quick_settings_sound_mute">Mute</string>
 </resources>
