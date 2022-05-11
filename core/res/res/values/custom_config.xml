@@ -42,4 +42,6 @@
     <!-- Whether to spoof GMS as Pixel Tablet -->
     <bool name="config_spoofasTablet">false</bool>
 
+   <!-- These are system packages exempted from privacy indicator -->
+    <string-array name="config_indicatorExemptedPackageNames" translatable="false" />
 </resources>
