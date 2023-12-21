@@ -422,5 +422,7 @@ public class SecureSettingsValidators {
         VALIDATORS.put(Secure.AUTOFILL_SERVICE, AUTOFILL_SERVICE_VALIDATOR);
         VALIDATORS.put(Secure.STYLUS_POINTER_ICON_ENABLED, BOOLEAN_VALIDATOR);
         VALIDATORS.put(Secure.CAMERA_EXTENSIONS_FALLBACK, BOOLEAN_VALIDATOR);
+        VALIDATORS.put(Secure.VPN_ENFORCE_DNS, BOOLEAN_VALIDATOR);
+        VALIDATORS.put(Secure.VPN_ENFORCE_DNS_STORE, new DiscreteValueValidator(new String[] {"-1", "0", "1", "2"}));
     }
 }
