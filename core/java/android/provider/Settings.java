@@ -12668,6 +12668,12 @@ public final class Settings {
         public static final String MEDIA_CONTROLS_ALWAYS_SHOW_TIME = "media_controls_always_show_time";
 
         /**
+         * The amount of custom actions that apps are allowed to add in the player UI
+         * @hide
+         */
+        public static final String MEDIA_CONTROLS_ACTIONS = "media_controls_actions";
+
+        /**
          * These entries are considered common between the personal and the managed profile,
          * since the managed profile doesn't get to change them.
          */

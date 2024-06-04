@@ -270,5 +270,6 @@ public class SecureSettings {
         Settings.Secure.VISUAL_QUERY_ACCESSIBILITY_DETECTION_ENABLED,
         Settings.Secure.VPN_ENFORCE_DNS,
         Settings.Secure.MEDIA_CONTROLS_ALWAYS_SHOW_TIME,
+        Settings.Secure.MEDIA_CONTROLS_ACTIONS,
     };
 }
