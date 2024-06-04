@@ -830,7 +830,7 @@ constructor(
         }
     }
 
-    private fun updatePlayers(recreateMedia: Boolean) {
+    public fun updatePlayers(recreateMedia: Boolean) {
         pageIndicator.tintList =
             ColorStateList.valueOf(context.getColor(R.color.media_paging_indicator))
         val previousVisibleKey =
