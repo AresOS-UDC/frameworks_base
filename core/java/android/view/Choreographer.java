@@ -1359,9 +1359,9 @@ public final class Choreographer {
                 // Otherwise, messages that predate the vsync event will be handled first.
                 long now = System.nanoTime();
                 if (timestampNanos > now) {
-                    Log.w(TAG, "Frame time is " + ((timestampNanos - now) * 0.000001f)
+                    /*Log.w(TAG, "Frame time is " + ((timestampNanos - now) * 0.000001f)
                             + " ms in the future!  Check that graphics HAL is generating vsync "
-                            + "timestamps using the correct timebase.");
+                            + "timestamps using the correct timebase.");*/
                     timestampNanos = now;
                 }
 
