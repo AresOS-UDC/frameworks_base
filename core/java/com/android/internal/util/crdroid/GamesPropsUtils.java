@@ -99,7 +99,6 @@ public class GamesPropsUtils {
 
         propsToChange.put("ROG6", createROG6Props());
         packagesToChange.put("ROG6", new String[]{
-                "com.activision.callofduty.shooter",
                 "com.gameloft.android.ANMP.GloftA9HM",
                 "com.madfingergames.legends",
                 "com.riotgames.league.teamfighttactics",
@@ -117,8 +116,9 @@ public class GamesPropsUtils {
                 "com.vng.pubgmobile"
         });
 
-        propsToChange.put("XP5", createXP5Props());
-        packagesToChange.put("XP5", new String[]{
+        propsToChange.put("LenovoY700", createLenovoY700Props());
+        packagesToChange.put("LenovoY700", new String[]{
+                "com.activision.callofduty.shooter",
                 "com.garena.game.codm",
                 "com.tencent.tmgp.kr.codm",
                 "com.vng.codmvn"
@@ -216,11 +216,11 @@ public class GamesPropsUtils {
         return props;
     }
 
-    private static Map<String, Object> createXP5Props() {
+    private static Map<String, Object> createLenovoY700Props() {
         Map<String, Object> props = new HashMap<>();
-        props.put("BRAND", "Sony");
-        props.put("MANUFACTURER", "Sony");
-        props.put("MODEL", "SO-52A");
+        props.put("BRAND", "Lenovo");
+        props.put("MANUFACTURER", "Lenovo");
+        props.put("MODEL", "Lenovo TB-9707F");
         return props;
     }
 
