@@ -68,13 +68,7 @@ public class PropImitationHooks {
     private static final String PACKAGE_WALLPAPEREFFECTS = "com.google.android.wallpaper.effects";
     private static final String PACKAGE_WEATHER = "com.google.android.apps.weather";
 
-    private static final String PROCESS_GMS_GAPPS = PACKAGE_GMS + ".gapps";
-    private static final String PROCESS_GMS_GSERVICE = PACKAGE_GMS + ".gservice";
-    private static final String PROCESS_GMS_LEARNING = PACKAGE_GMS + ".learning";
-    private static final String PROCESS_GMS_PERSISTENT = PACKAGE_GMS + ".persistent";
-    private static final String PROCESS_GMS_SEARCH = PACKAGE_GMS + ".search";
     private static final String PROCESS_GMS_UNSTABLE = PACKAGE_GMS + ".unstable";
-    private static final String PROCESS_GMS_UPDATE = PACKAGE_GMS + ".update";
 
     private static final String PROP_SECURITY_PATCH = "persist.sys.pihooks.security_patch";
     private static final String PROP_FIRST_API_LEVEL = "persist.sys.pihooks.first_api_level";
@@ -91,17 +85,6 @@ public class PropImitationHooks {
             "MODEL", "Pixel 9 Pro",
             "ID", "AD1A.240905.004",
             "FINGERPRINT", "google/caiman/caiman:14/AD1A.240905.004/12196292:user/release-keys"
-    );
-
-    private static final Map<String, String> sPixelFiveProps = Map.of(
-            "PRODUCT", "barbet",
-            "DEVICE", "barbet",
-            "HARDWARE", "barbet",
-            "MANUFACTURER", "Google",
-            "BRAND", "google",
-            "MODEL", "Pixel 5a",
-            "ID", "AP2A.240805.004",
-            "FINGERPRINT", "google/barbet/barbet:14/AP2A.240805.005/12025142:user/release-keys"
     );
 
     private static final Map<String, String> sPixelTabletProps = Map.of(
@@ -200,15 +183,6 @@ public class PropImitationHooks {
             case PROCESS_GMS_UNSTABLE:
                 dlog("Setting certified props for: " + packageName + " process: " + processName);
                 setCertifiedPropsForGms();
-                return;
-            case PROCESS_GMS_PERSISTENT:
-            case PROCESS_GMS_GAPPS:
-            case PROCESS_GMS_GSERVICE:
-            case PROCESS_GMS_LEARNING:
-            case PROCESS_GMS_SEARCH:
-            case PROCESS_GMS_UPDATE:
-                dlog("Spoofing Pixel 5a for: " + packageName + " process: " + processName);
-                setProps(sPixelFiveProps);
                 return;
         }
 
