@@ -6421,6 +6421,12 @@ public final class Settings {
         public static final String NAVBAR_LONG_PRESS_GESTURE = "navbar_long_press_gesture";
 
         /**
+         * Whether to show the carrier name from the lockscreen
+         * @hide
+         */
+        public static final String CARRIER_ON_LOCKSCREEN = "carrier_on_lockscreen";
+
+        /**
          * Keys we no longer back up under the current schema, but want to continue to
          * process when restoring historical backup datasets.
          *
